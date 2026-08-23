@@ -21,12 +21,11 @@ Bản Việt Hóa này được thực hiện kỳ công với hơn **16.500+** 
 ---
 
 ## 📥 Hướng Dẫn Cài Đặt (Dành cho người chơi)
-Cài đặt cực kỳ đơn giản, chỉ cần làm theo 3 bước sau:
+> 📌 *Nếu bạn dùng Steam:* Click chuột phải vào `Grounded 2` trong thư viện (Library) ➔ `Manage` ➔ `Browse local files`
 
-1. **Giải nén** file ZIP bạn vừa tải về. Bạn sẽ thu được một thư mục mang tên `Augusta`.
-2. **Mở thư mục cài đặt gốc** của game Grounded 2 trên máy tính của bạn.
-   > 📌 *Nếu bạn dùng Steam:* Click chuột phải vào `Grounded 2` trong thư viện (Library) ➔ `Manage` ➔ `Browse local files`.
-3. **Copy (Chép)** thư mục `Augusta` vừa giải nén và **Paste (Dán đè)** vào thư mục cài đặt gốc của game.
+**Mở thư mục cài đặt gốc** của game Grounded 2 trên máy tính của bạn.
+
+1. **Giải nén** file ZIP bạn vừa tải về hoặc copy toàn bộ file và thư mục `Augusta`
    > ⚠️ *Lưu ý: Nếu máy tính hiện thông báo "Replace the files in the destination", hãy nhấn **Yes / Replace** để đồng ý ghi đè toàn bộ.*
 4. **Mở game** và tận hưởng 100% Tiếng Việt!
 
@@ -34,18 +33,9 @@ Cài đặt cực kỳ đơn giản, chỉ cần làm theo 3 bước sau:
 
 ## 🗑️ Hướng Dẫn Gỡ Cài Đặt (Uninstall)
 Nếu bạn muốn quay về ngôn ngữ mặc định và gỡ bỏ bản Việt hóa, có 2 cách siêu nhanh:
-
-**Cách 1: Sử dụng công cụ tự động (Khuyên dùng)**
 - Chép file `Uninstall_VietHoa.bat` vào thư mục cài đặt gốc của game.
 - Chạy (Click đúp chuột) file `Uninstall_VietHoa.bat` để công cụ tự động xóa sạch các file Mod chỉ trong 1 giây.
 
-**Cách 2: Gỡ thủ công**
-Truy cập theo đường dẫn sau trong thư mục game:
-`[Thư mục cài game]\Augusta\Content\Paks`
-Và tiến hành **Xóa 3 file** sau đây:
-- `FEΔRVietHoa_P.pak`
-- `FEΔRVietHoa_P.ucas`
-- `FEΔRVietHoa_P.utoc`
 
 ---
 
