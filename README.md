@@ -40,6 +40,5 @@ Nếu bạn muốn quay về ngôn ngữ mặc định và gỡ bỏ bản Việ
 ---
 
 <div align="center">
-  <b>Chúc các bạn có những giờ phút sinh tồn vui vẻ trong thế giới Grounded 2!</b> <br>
   <i>Thực hiện bởi <b>FEΔR Team</b></i> 🚀
 </div>
