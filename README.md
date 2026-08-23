@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Grounded%202%20Việt%20Hóa&fontSize=70&fontAlignY=35&desc=Được%20thực%20hiện%20bởi%20FEΔR%20Team&descAlignY=55&descAlign=50" />
 
-  # 🎮 Bản Việt Hóa Grounded 2 (100%)
+  # 🎮 Bản Việt Hóa Grounded 2 
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Status](https://img.shields.io/badge/Status-Completed-success.svg)]()
