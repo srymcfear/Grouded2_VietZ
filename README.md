@@ -14,7 +14,7 @@
 ---
 
 ## 🌟 Giới Thiệu
-Bản Việt Hóa này được thực hiện kỳ công với hơn **16.500+** dòng hội thoại, giao diện, nhiệm vụ, và ghi chép. Chúng tôi tập trung vào việc trau chuốt từ ngữ, đảm bảo văn phong tự nhiên, phù hợp nhất với bối cảnh sinh tồn của thế giới tí hon trong Grounded 2.
+Bản Việt Hóa này được thực hiện đầy đủ dòng hội thoại, giao diện, nhiệm vụ, và ghi chép. Chúng tôi tập trung vào việc trau chuốt từ ngữ, đảm bảo văn phong tự nhiên, phù hợp nhất với bối cảnh sinh tồn của thế giới tí hon trong Grounded 2. Nếu có lỗi hoặc sai câu từ chỗ nào có thể gửi góp ý lên git.
 
 * 💡 **Lưu ý:** Bản Mod này được phát triển dựa trên nền tảng ngôn ngữ có sẵn của game gốc.
 
