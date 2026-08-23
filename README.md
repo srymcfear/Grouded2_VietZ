@@ -32,8 +32,7 @@ Bản Việt Hóa này được thực hiện đầy đủ dòng hội thoại, 
 ---
 
 ## 🗑️ Hướng Dẫn Gỡ Cài Đặt (Uninstall)
-Nếu bạn muốn quay về ngôn ngữ mặc định và gỡ bỏ bản Việt hóa, có 2 cách siêu nhanh:
-- Chép file `Uninstall_VietHoa.bat` vào thư mục cài đặt gốc của game.
+Nếu bạn muốn quay về ngôn ngữ mặc định và gỡ bỏ bản Việt hóa:
 - Chạy (Click đúp chuột) file `Uninstall_VietHoa.bat` để công cụ tự động xóa sạch các file Mod chỉ trong 1 giây.
 
 
