@@ -8,7 +8,7 @@
   [![Version](https://img.shields.io/badge/Version-1.0.1-blue.svg)]()
   [![Team](https://img.shields.io/badge/Translator-FEΔR%20Team-red.svg)]()
 
-  *Dự án Việt Hóa hoàn chỉnh 100% dành cho tựa game sinh tồn Grounded 2, mang đến trải nghiệm tuyệt vời nhất với ngôn ngữ mẹ đẻ.*
+  *Dự án Việt Hóa dành cho tựa game sinh tồn Grounded 2, mang đến trải nghiệm tuyệt vời nhất với ngôn ngữ mẹ đẻ.*
 </div>
 
 ---
@@ -19,7 +19,7 @@ Bản Việt Hóa này được thực hiện đầy đủ dòng hội thoại, 
 * 💡 **Lưu ý:** Bản Mod này được phát triển dựa trên nền tảng ngôn ngữ có sẵn của game gốc.
 
 ---
-[![TẢI VỀ TẠI ĐÂY](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20T%E1%BA%A2I%20V%E1%BB%80%20T%E1%BA%A0I%20%C4%90%C3%82Y-2ea44f?style=for-the-badge)](https://raw.githubusercontent.com/srymcfear/Grounded2_VietZ/main/Grouded2_VietZ.zip)
+[![TẢI VỀ TẠI ĐÂY](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20T%E1%BA%A2I%20V%E1%BB%80%20T%E1%BA%A0I%20%C4%90%C3%82Y-2ea44f?style=for-the-badge)](https://raw.githubusercontent.com/srymcfear/Grounded2_VietZ/main/Grounded2_VietZ.zip)
 
 
 ## 📥 Hướng Dẫn Cài Đặt (Dành cho người chơi)
