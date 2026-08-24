@@ -36,7 +36,6 @@ Bản Việt Hóa này được thực hiện đầy đủ dòng hội thoại, 
 ## 🔄 Tự Động Kiểm Tra & Cập Nhật Phiên Bản Mới
 - Để kiểm tra xem có bản dịch hoặc bản vá lỗi mới hay chưa:
   - Chỉ cần **Click đúp chuột vào file `KiemTra_CapNhat.bat`** ngay trong thư mục game.
-  - Công cụ sẽ tự động kết nối máy chủ GitHub, so sánh phiên bản và hỏi bạn có muốn tự động tải & cài đặt bản mới nhất hay không.
 
 ---
 
