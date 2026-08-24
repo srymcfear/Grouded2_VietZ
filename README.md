@@ -19,6 +19,8 @@ Bản Việt Hóa này được thực hiện đầy đủ dòng hội thoại, 
 * 💡 **Lưu ý:** Bản Mod này được phát triển dựa trên nền tảng ngôn ngữ có sẵn của game gốc.
 
 ---
+[![TẢI VỀ](https://img.shields.io/badge/DOWNLOAD-Grounded%202%20VietZ-4EBA6F?style=for-the-badge&logo=curseforge&logoColor=white&labelColor=23272A)](https://github.com/srymcfear/Grounded2_VietZ/releases/download/Grounded2/Grounded2_VietZ.zip)
+
 
 ## 📥 Hướng Dẫn Cài Đặt (Dành cho người chơi)
 > 📌 *Nếu bạn dùng Steam:* Click chuột phải vào `Grounded 2` trong thư viện (Library) ➔ `Manage` ➔ `Browse local files`
