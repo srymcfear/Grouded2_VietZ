@@ -1,4 +1,4 @@
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $repoUrl = 'https://raw.githubusercontent.com/srymcfear/Grounded2_VietZ/main/version.json'
 $localDir = $PSScriptRoot
 if ([string]::IsNullOrEmpty($localDir)) {
@@ -20,7 +20,7 @@ Write-Host '[*] Đang kết nối máy chủ kiểm tra phiên bản...' -Foregr
 try {
     $onlineInfo = Invoke-RestMethod -Uri $repoUrl -UseBasicParsing -Headers @{'Cache-Control'='no-cache'}
 } catch {
-    Write-Host '[X] Không thể kết nối tới GitHub hoặc file version.json chưa được upload!' -ForegroundColor Red
+    Write-Host '[X] Không thể kết nối tới GitHub!' -ForegroundColor Red
     Write-Host "    Chi tiết: $($_.Exception.Message)" -ForegroundColor Gray
     Write-Host ''
     Read-Host 'Nhấn Enter để thoát...'
@@ -54,7 +54,7 @@ if ($needUpdate) {
     Write-Host '=== ĐÃ CÓ BẢN CẬP NHẬT MỚI! ===' -ForegroundColor Green
     Write-Host 'Nội dung cập nhật (Changelog):' -ForegroundColor White
     foreach ($item in $onlineInfo.changelog) {
-        Write-Host "  * $item" -ForegroundColor Gray
+        Write-Host "  • $item" -ForegroundColor Gray
     }
     Write-Host ''
     $opt = Read-Host 'Bạn có muốn tải và cài đặt cập nhật ngay? (Y/N)'
@@ -86,9 +86,11 @@ if ($runningGames) {
 Write-Host ''
 Write-Host '[*] Đang tải bản Việt Hóa mới nhất...' -ForegroundColor Yellow
 
+$downloadOk = $false
 try {
     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipTemp -UseBasicParsing
     Write-Host '[✓] Tải dữ liệu thành công!' -ForegroundColor Green
+    $downloadOk = $true
 } catch {
     Write-Host '[X] Tải file thất bại! Vui lòng kiểm tra lại kết nối mạng.' -ForegroundColor Red
     Write-Host "    Chi tiết: $($_.Exception.Message)" -ForegroundColor Gray
@@ -97,36 +99,38 @@ try {
     exit
 }
 
-Write-Host '[*] Đang giải nén và cập nhật vào game...' -ForegroundColor Yellow
-try {
-    Add-Type -AssemblyName System.IO.Compression.FileSystem
-    $zip = [System.IO.Compression.ZipFile]::OpenRead($zipTemp)
-    foreach ($entry in $zip.Entries) {
-        if ([string]::IsNullOrEmpty($entry.Name)) { continue }
-        $destPath = Join-Path $localDir $entry.FullName
-        $destParent = [System.IO.Path]::GetDirectoryName($destPath)
-        if (-not (Test-Path $destParent)) { 
-            [System.IO.Directory]::CreateDirectory($destParent) | Out-Null 
+if ($downloadOk) {
+    Write-Host '[*] Đang giải nén và cập nhật vào game...' -ForegroundColor Yellow
+    try {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        $zip = [System.IO.Compression.ZipFile]::OpenRead($zipTemp)
+        foreach ($entry in $zip.Entries) {
+            if ([string]::IsNullOrEmpty($entry.Name)) { continue }
+            $destPath = Join-Path $localDir $entry.FullName
+            $destParent = [System.IO.Path]::GetDirectoryName($destPath)
+            if (-not (Test-Path $destParent)) { 
+                [System.IO.Directory]::CreateDirectory($destParent) | Out-Null 
+            }
+            [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $true)
         }
-        [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $true)
+        $zip.Dispose()
+
+        # Lưu version.json local
+        $onlineInfo | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $localVersionFile -Encoding UTF8
+
+        Write-Host ''
+        Write-Host '==================================================' -ForegroundColor Green
+        Write-Host '   [✓] CẬP NHẬT BẢN VIỆT HÓA THÀNH CÔNG!          ' -ForegroundColor White
+        Write-Host "   Phiên bản: v$onlineVer                         " -ForegroundColor Cyan
+        Write-Host '   Chúc bạn có những giờ phút chơi game vui vẻ!   ' -ForegroundColor Yellow
+        Write-Host '==================================================' -ForegroundColor Green
+    } catch {
+        Write-Host '[X] Lỗi trong quá trình giải nén / ghi đè file!' -ForegroundColor Red
+        Write-Host "    Chi tiết: $($_.Exception.Message)" -ForegroundColor Gray
     }
-    $zip.Dispose()
-    Remove-Item -Force $zipTemp -ErrorAction SilentlyContinue
-
-    # Lưu version.json local
-    $onlineInfo | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $localVersionFile -Encoding UTF8
-
-    Write-Host ''
-    Write-Host '==================================================' -ForegroundColor Green
-    Write-Host '   [✓] CẬP NHẬT BẢN VIỆT HÓA THÀNH CÔNG!          ' -ForegroundColor White
-    Write-Host "   Phiên bản: v$onlineVer                         " -ForegroundColor Cyan
-    Write-Host '   Chúc bạn có những giờ phút chơi game vui vẻ!   ' -ForegroundColor Yellow
-    Write-Host '==================================================' -ForegroundColor Green
-} catch {
-    Write-Host '[X] Lỗi trong quá trình giải nén / ghi đè file!' -ForegroundColor Red
-    Write-Host "    Chi tiết: $($_.Exception.Message)" -ForegroundColor Gray
-} finally {
-    if (Test-Path $zipTemp) { Remove-Item -Force $zipTemp -ErrorAction SilentlyContinue }
+    if (Test-Path $zipTemp) { 
+        Remove-Item -Force $zipTemp -ErrorAction SilentlyContinue 
+    }
 }
 
 Write-Host ''
