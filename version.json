@@ -1,12 +1,12 @@
 {
-  "version": "1.0.1",
-  "build_date": "2026-08-24",
+  "version": "1.0.2",
+  "build_date": "2026-08-28",
   "game_version": "0.3.1+",
   "author": "FEΔR Team",
   "changelog": [
-    "Khắc phục hoàn toàn lỗi hiển thị mã màu RichText <GlobalColor.Attention>",
-    "Chuẩn hóa 63 chuỗi mô tả vật phẩm và danh pháp tiếng Việt",
-    "Tối ưu hiệu năng font và độ tương thích bản cập nhật mới nhất"
+    "Cập nhật thanh trạng thái HUD: Hiệu ứng Ăn mòn (Corrosion / Caustic)",
+    "Chuẩn hóa thuật ngữ Luống đất / Luống trồng (Garden Bed) thay cho Giường",
+    "Hoàn thiện tên và mô tả: Luống nấm, Luống thủy canh, Sách công thức"
   ],
   "download_url": "https://raw.githubusercontent.com/srymcfear/Grounded2_VietZ/main/Grounded2_VietZ.zip"
 }
